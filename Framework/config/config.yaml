@@ -1,0 +1,22 @@
+URL1: http://wmanager.qkagame.net/Home/Index
+URL: http://www.baidu.com
+
+API_URL:
+    recharge_pay: http://wpay.qkagame.net/recharge/pay
+    InfoCheck: http://wapi.qkagame.net/api/Consortia/InfoCheck
+
+log:
+    file_name: test.log
+    backup: 5
+    console_level: WARNING
+    file_level: DEBUG
+    pattern: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+
+email:
+    title: '百度搜索测试报告'
+    message: '这是今天的测试报告，请查收！'
+    receiver: '547308262@qq.com'
+    server: 'smtp.163.com'
+    sender: 'siyu201410@163.com'
+    password: 'yusi051925'
+
