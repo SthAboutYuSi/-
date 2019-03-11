@@ -3,7 +3,9 @@
 还可以封装TCPClient，用来进行tcp链接，测试socket接口等等。
 """
 
-import requests
+import requests,sys,os
+
+sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "../..")))
 from src.utils.log import logger
 
 METHODS = ['GET', 'POST', 'HEAD', 'TRACE', 'PUT', 'DELETE', 'OPTIONS', 'CONNECT']
@@ -47,3 +49,12 @@ class HTTPClient(object):
         logger.debug('{0} {1}'.format(self.method, self.url))
         logger.debug('请求成功: {0}\n{1}'.format(response, response.text))
         return response
+
+# if __name__ == '__main__':
+
+#     datas = [{'guildId': 10000, 'guiIdName': '自动化测试', 'declaration': '自动化测试', 'submitTime': 'nowtime'}]
+#     print (len(datas))
+#     for d in range(0,len(datas)):
+#         print (d,datas[d])
+#         res = HTTPClient(url='http://wapi.qkagame.net/api/Consortia/InfoCheck', method='POST').send(params=datas[d])
+#         print (res)

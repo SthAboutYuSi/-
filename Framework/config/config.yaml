@@ -4,6 +4,7 @@ URL: http://www.baidu.com
 API_URL:
     recharge_pay: http://wpay.qkagame.net/recharge/pay
     InfoCheck: http://wapi.qkagame.net/api/Consortia/InfoCheck
+    sss: http://192.168.2.196/qka.cgi?target=relation&function=AddPromoteInfo
 
 log:
     file_name: test.log
