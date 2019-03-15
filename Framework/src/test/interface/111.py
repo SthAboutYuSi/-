@@ -9,14 +9,24 @@ from src.utils.log import logger
 from src.utils.file_reader import ExcelReader
 from src.utils.HTMLTestRunner import HTMLTestRunner
 from src.utils.mail import Email
+from src.utils.client import HTTPClient
 
-def test_checkinfo(self):
-	API_URL = Config().get('API_URL').get('InfoCheck')
-	excel = DATA_PATH + '\APITest.xlsx'
+def test_checkinfo():
+	pass
 	
-	datas = ExcelReader(self.excel).data
-	return datas
+	
+	# for d in range(0,len(datas)):
+	# 	print (datas[d])
+	# 	res = client.send(params=datas[d])
+	# 	print(res)
+		#self.assertEqual(0, res.code)
 	
 
 if __name__ == '__main__':
-	print('测试路径是否OK,路径为：', test_checkinfo())
+	API_URL = Config().get('API_URL').get('sss')
+	excel = DATA_PATH + '\APITest.xlsx'
+	datas = ExcelReader(excel=excel,sheet='sss').data
+	for d in range(0,len(datas)):
+		print (datas[d])
+		res = client.send(params=datas[d])
+		print(res)

@@ -3,8 +3,11 @@
 还可以封装TCPClient，用来进行tcp链接，测试socket接口等等。
 """
 
-import requests
+import requests,sys,os,json
+
+sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "../..")))
 from src.utils.log import logger
+from src.utils.extractor import JMESPathExtractor
 
 METHODS = ['GET', 'POST', 'HEAD', 'TRACE', 'PUT', 'DELETE', 'OPTIONS', 'CONNECT']
 
@@ -44,6 +47,30 @@ class HTTPClient(object):
     def send(self, params=None, data=None, **kwargs):
         response = self.session.request(method=self.method, url=self.url, params=params, data=data, **kwargs)
         response.encoding = 'utf-8'
+        logger.debug('params:{0}, data:{1}'.format(params, data))
         logger.debug('{0} {1}'.format(self.method, self.url))
-        logger.debug('请求成功: {0}\n{1}'.format(response, response.text))
+        if response.status_code == 200:
+            logger.debug('请求成功: {0}\n{1}'.format(response, response.text))
+        else:
+            logger.debug('请求失败：{0}\n{1}'.format(response, response.text))
         return response
+
+if __name__ == '__main__':
+
+    datas = [{'productType': 2, 'currentPage': 3, 'pageSize': 2}]
+
+    # print (len(datas))
+    # requests.session().headers.update({'content-type': 'application/json'})
+    print (requests.session().headers)
+    for d in range(0,len(datas)):
+        print (datas[d])
+        # print (type(datas[d]))
+        res = HTTPClient(url='http://wupdate.qkagame.net/api/Mall/Product/List', method='POST').send(data=datas[d])
+        print (len(res.text))
+        print (type(res.text))
+        print (res.text)
+        a = JMESPathExtractor().extract(query='[0].itemName', body=res.text)
+        # a= json.loads(res.text)
+        print (type(a))
+        print (a)
+        # print (a[0]['itemName'])

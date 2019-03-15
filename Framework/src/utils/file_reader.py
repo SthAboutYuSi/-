@@ -3,7 +3,7 @@
 """
 
 import yaml
-import os
+import os,time,json
 from xlrd import open_workbook
 
 class YamlReader:
@@ -83,9 +83,22 @@ class ExcelReader:
 
 			if self.title_line:
 				title = s.row_values(0)  # 首行为title
-				for col in range(1, s.nrows):
+				#datatype = s.row_values(1)   #第2行为数据类型
+				for row in range(1, s.nrows):
                     # 依次遍历其余行，与首行组成dict，拼到self._data中
-					self._data.append(dict(zip(title, s.row_values(col))))
+					#print(s.row_values(row))
+					value =s.row_values(row)
+					for col in range(0, s.ncols):
+						# print (value[col])
+						if s.row_values(row)[col] == 'nowtime' :
+							value[col] = int(time.time())
+						# print (type(value[col]))
+						if type(value[col]) == float and value[col] % 1 == 0:
+							value[col]=int(value[col])
+						elif type(value[col]) == str:
+							value[col]=str(value[col])
+
+					self._data.append(dict(zip(title, value)))
 			else:
 				for col in range(0, s.nrows):
                     # 遍历所有行，拼到self._data中
@@ -93,6 +106,30 @@ class ExcelReader:
 		return self._data
 
 
+
+# class readExcel():
+# 	def get_xls(self, xlsPath, sheet_name):# xls_name填写用例的Excel名称 sheet_name该Excel的sheet名称
+# 		cls = []
+# 		file = open_workbook(xlsPath)# 打开用例Excel
+# 		sheet = file.sheet_by_name(sheet_name)#获得打开Excel的sheet
+#         # 获取这个sheet内容行数
+# 		nrows = sheet.nrows
+# 		for i in range(nrows):#根据行数做循环
+# 			if sheet.row_values(i)[0] != u'case_name':#如果这个Excel的这个sheet的第i行的第一列不等于case_name那么我们把这行的数据添加到cls[]
+# 				cls.append(sheet.row_values(i))               
+# 		return cls
+
+if __name__ == '__main__':#我们执行该文件测试一下是否可以正确获取Excel中的值
+	#print(readExcel().get_xls('E:\工作\Framework\data\APITest.xlsx', 'InfoCheck'))
+	datas = ExcelReader('E:\工作\Framework\data\APITest.xlsx', sheet='ProductList').data
+	print(datas)
+	print (len(datas))
+	for i in range(0, len(datas)):
+		
+		# print (datas[i]['expectation'])
+		# datas[i].pop('expectation')
+		print (datas[i])
+		print (json.dumps(datas[i]))
 
 # if __name__ == '__main__':
 # 	#y = r'E:\工作\Framework\config\config.yaml'

@@ -13,3 +13,7 @@ class JMESPathExtractor(object):
             return jmespath.search(query, json.loads(body))
         except Exception as e:
             raise ValueError("Invalid query: " + query + " : " + str(e))
+
+# if __name__ == '__main__':
+# 	a=JMESPathExtractor().extract(query='ret', body='{"ret":-2}')
+# 	print (a)
