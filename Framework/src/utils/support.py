@@ -1,5 +1,6 @@
 """一些支持方法，比如加密"""
-import hashlib
+import hashlib,sys,os
+sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "../..")))
 from src.utils.log import logger
 
 
@@ -40,5 +41,8 @@ def encrypt(string, salt='', encrypt_way='MD5'):
 
     hash_string.update(string.encode())
     return hash_string.hexdigest()
+
+if __name__ == '__main__':
+    print(encrypt('aa12345'))
 
 

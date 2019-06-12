@@ -56,21 +56,37 @@ class HTTPClient(object):
         return response
 
 if __name__ == '__main__':
+    datas="{'mchId': 10001, 'isPloy': 0, 'platformType': 1, 'userID': 10087, 'account': 10087, 'orderNO': '155929124913961877', 'productId': 101, 'channelNO': 1020001001, 'payAmount': 6, 'itemID': 10001, 'itemCount': 50001, 'subject': '6W', 'body': '6W', 'device': 0, 'method': 0, 'gateway': 101, 'identity': 'r0tv6alf3c6eo8rfa5df85j8kg0mtach', 'extData1': '', 'payExtInfo': '', 'sign': '', 'signType': 'RSA', 'version': '1.0'}"
+    
+    url = "http://10.8.26.218:1029/pay"
+    headers={
+    'Content-Type': "application/json"
 
-    datas = [{'productType': 2, 'currentPage': 3, 'pageSize': 2}]
 
-    # print (len(datas))
-    # requests.session().headers.update({'content-type': 'application/json'})
-    print (requests.session().headers)
-    for d in range(0,len(datas)):
-        print (datas[d])
-        # print (type(datas[d]))
-        res = HTTPClient(url='http://wupdate.qkagame.net/api/Mall/Product/List', method='POST').send(data=datas[d])
-        print (len(res.text))
-        print (type(res.text))
-        print (res.text)
-        a = JMESPathExtractor().extract(query='[0].itemName', body=res.text)
-        # a= json.loads(res.text)
-        print (type(a))
-        print (a)
-        # print (a[0]['itemName'])
+    
+   
+    
+   
+   
+    }
+    # # print (len(datas))
+    # # requests.session().headers.update({'content-type': 'application/json'})
+    # print (requests.session().headers)
+    # for d in range(0,len(datas)):
+    #     print (datas[d])
+        # print (str(json.dumps(datas[d])))
+    #     # print (type(datas[d]))
+        # res = HTTPClient(url='http://10.8.26.218:1029/pay', method='POST', headers={'Content_Type':'application/json'}).send(data=datas[d])
+    response = requests.request("POST",url, data=datas, headers={'Content-Type': "application/json"})
+
+    #     print (len(res.text))
+    #     print (type(res.text))
+    print (response)
+    #     a = JMESPathExtractor().extract(query='[0].itemName', body=res.text)
+    #     # a= json.loads(res.text)
+    #     print (type(a))
+    #     print (a)
+    #     # print (a[0]['itemName'])
+    # datas = {"type":"user_mail_operation","operation":1,"id":317,"to":["321245","321303","321304"],"title":"接口测试33","contain":"接口测试","time":1553581757,"reward":""}
+    # res = HTTPClient(url='http://10.8.12.169/game_master/game_master.php', method='POST').send(json=datas)
+    # print (res.text)

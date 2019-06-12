@@ -200,12 +200,12 @@
         
     <div class='page-header'>
         <h1>API测试框架</h1>
-    <p class='attribute'><strong>开始时间:</strong> 2019-03-15 14:21:00</p>
-<p class='attribute'><strong>运行时长:</strong> 0:00:00.565503</p>
-<p class='attribute'><strong>状态:</strong> 通过 2</p>
+    <p class='attribute'><strong>开始时间:</strong> 2019-06-05 18:18:44</p>
+<p class='attribute'><strong>运行时长:</strong> 0:02:14.292682</p>
+<p class='attribute'><strong>状态:</strong> 通过 150 失败 50 错误 1</p>
 
     </div>
-    <div style="float: left;width:50%;"><p class='description'>接口html报告</p></div>
+    <div style="float: left;width:50%;"><p class='description'>接口测试html报告</p></div>
     <div id="chart" style="width:50%;height:400px;float:left;"></div>
 
         
@@ -233,17 +233,17 @@
             <td>查看</td>
         </tr>
         
-    <tr class='passClass'>
-        <td>TestMall: 钻石商城接口</td>
-        <td>2</td>
-        <td>2</td>
-        <td>0</td>
-        <td>0</td>
-        <td><a href="javascript:showClassDetail('c1',2)">详情</a></td>
+    <tr class='errorClass'>
+        <td>TestPay: 统一订单接口</td>
+        <td>201</td>
+        <td>150</td>
+        <td>50</td>
+        <td>1</td>
+        <td><a href="javascript:showClassDetail('c1',201)">详情</a></td>
     </tr>
 
 <tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_productlist: 钻石商城商品信息查询接口</div></td>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -253,7 +253,7 @@
     <div id='div_pt1.1' class="popup_window">
         <pre>pt1.1: 
 SubTestCase Pass:
-test_productlist (__main__.TestMall) (data='每页显示1个商品，当前页为第1页，查询钻石商城商品ID为97f4b542-d624-4ade-996a-b8ce8e0fc6a4的商品信息')</pre>
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-网关、网站商务识别号为空')</pre>
     </div>
     <!--css div popup end-->
 
@@ -261,7 +261,7 @@ test_productlist (__main__.TestMall) (data='每页显示1个商品，当前页�
 </tr>
 
 <tr id='pt1.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_productlist: 钻石商城商品信息查询接口</div></td>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -271,7 +271,3849 @@ test_productlist (__main__.TestMall) (data='每页显示1个商品，当前页�
     <div id='div_pt1.2' class="popup_window">
         <pre>pt1.2: 
 SubTestCase Pass:
-test_productlist (__main__.TestMall) (data='每页显示2个商品，当前页为第5页，查询元宝商城该页的商品信息')</pre>
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-支付宝官方扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
+        失败</a>
+
+    <div id='div_ft1.3' class="popup_window">
+        <pre>ft1.3: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-易宝网银')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -100
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.4')" >
+        失败</a>
+
+    <div id='div_ft1.4' class="popup_window">
+        <pre>ft1.4: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-易宝手机卡')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -100
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        通过</a>
+
+    <div id='div_pt1.5' class="popup_window">
+        <pre>pt1.5: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-微信扫码官方')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+        通过</a>
+
+    <div id='div_pt1.6' class="popup_window">
+        <pre>pt1.6: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-微信扫码非官方')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.7')" >
+        通过</a>
+
+    <div id='div_pt1.7' class="popup_window">
+        <pre>pt1.7: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-微信官方APP1')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.8' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.8')" >
+        失败</a>
+
+    <div id='div_ft1.8' class="popup_window">
+        <pre>ft1.8: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-微信官方APP2')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -100
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.9')" >
+        通过</a>
+
+    <div id='div_pt1.9' class="popup_window">
+        <pre>pt1.9: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-微信官方APP3')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.10')" >
+        通过</a>
+
+    <div id='div_pt1.10' class="popup_window">
+        <pre>pt1.10: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-微信官方APP4')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.11')" >
+        通过</a>
+
+    <div id='div_pt1.11' class="popup_window">
+        <pre>pt1.11: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-微信官方APP5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.12')" >
+        通过</a>
+
+    <div id='div_pt1.12' class="popup_window">
+        <pre>pt1.12: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-苹果支付官方APP')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.13' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.13')" >
+        失败</a>
+
+    <div id='div_ft1.13' class="popup_window">
+        <pre>ft1.13: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-支付宝官方H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -10005
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.14' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.14')" >
+        通过</a>
+
+    <div id='div_pt1.14' class="popup_window">
+        <pre>pt1.14: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-微信官方H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.15' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.15')" >
+        通过</a>
+
+    <div id='div_pt1.15' class="popup_window">
+        <pre>pt1.15: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-微信官方小游戏1')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.16' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.16')" >
+        通过</a>
+
+    <div id='div_pt1.16' class="popup_window">
+        <pre>pt1.16: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-微信官方小游戏2')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.17' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.17')" >
+        通过</a>
+
+    <div id='div_pt1.17' class="popup_window">
+        <pre>pt1.17: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-百度')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.18' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.18')" >
+        通过</a>
+
+    <div id='div_pt1.18' class="popup_window">
+        <pre>pt1.18: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-三六零1')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.19' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.19')" >
+        通过</a>
+
+    <div id='div_pt1.19' class="popup_window">
+        <pre>pt1.19: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-三六零2')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.20' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.20')" >
+        通过</a>
+
+    <div id='div_pt1.20' class="popup_window">
+        <pre>pt1.20: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-三六零3')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.21' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.21')" >
+        通过</a>
+
+    <div id='div_pt1.21' class="popup_window">
+        <pre>pt1.21: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-小米1')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.22' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.22')" >
+        通过</a>
+
+    <div id='div_pt1.22' class="popup_window">
+        <pre>pt1.22: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-小米2')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.23' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.23')" >
+        通过</a>
+
+    <div id='div_pt1.23' class="popup_window">
+        <pre>pt1.23: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-应用宝1')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.24' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.24')" >
+        通过</a>
+
+    <div id='div_pt1.24' class="popup_window">
+        <pre>pt1.24: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-应用宝2')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.25' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.25')" >
+        通过</a>
+
+    <div id='div_pt1.25' class="popup_window">
+        <pre>pt1.25: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-UC1')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.26' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.26')" >
+        通过</a>
+
+    <div id='div_pt1.26' class="popup_window">
+        <pre>pt1.26: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-UC2')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.27' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.27')" >
+        通过</a>
+
+    <div id='div_pt1.27' class="popup_window">
+        <pre>pt1.27: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-搜狗')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.28' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.28')" >
+        通过</a>
+
+    <div id='div_pt1.28' class="popup_window">
+        <pre>pt1.28: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-魅族')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.29' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.29')" >
+        通过</a>
+
+    <div id='div_pt1.29' class="popup_window">
+        <pre>pt1.29: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-应用汇')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.30' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.30')" >
+        通过</a>
+
+    <div id='div_pt1.30' class="popup_window">
+        <pre>pt1.30: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-YY助手')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.31' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.31')" >
+        通过</a>
+
+    <div id='div_pt1.31' class="popup_window">
+        <pre>pt1.31: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-HTC')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.32' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.32')" >
+        通过</a>
+
+    <div id='div_pt1.32' class="popup_window">
+        <pre>pt1.32: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-3899')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.33' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.33')" >
+        通过</a>
+
+    <div id='div_pt1.33' class="popup_window">
+        <pre>pt1.33: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-啪啪游')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.34' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.34')" >
+        通过</a>
+
+    <div id='div_pt1.34' class="popup_window">
+        <pre>pt1.34: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-卓易')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.35' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.35')" >
+        通过</a>
+
+    <div id='div_pt1.35' class="popup_window">
+        <pre>pt1.35: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-UC豌豆荚1')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.36' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.36')" >
+        通过</a>
+
+    <div id='div_pt1.36' class="popup_window">
+        <pre>pt1.36: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-UC豌豆荚2')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.37' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.37')" >
+        通过</a>
+
+    <div id='div_pt1.37' class="popup_window">
+        <pre>pt1.37: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-孢子互娱1')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.38' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.38')" >
+        通过</a>
+
+    <div id='div_pt1.38' class="popup_window">
+        <pre>pt1.38: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-孢子互娱2')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.39' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.39')" >
+        通过</a>
+
+    <div id='div_pt1.39' class="popup_window">
+        <pre>pt1.39: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-华为1')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.40' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.40')" >
+        通过</a>
+
+    <div id='div_pt1.40' class="popup_window">
+        <pre>pt1.40: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-华为2')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.41' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.41')" >
+        通过</a>
+
+    <div id='div_pt1.41' class="popup_window">
+        <pre>pt1.41: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-OPPO1')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.42' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.42')" >
+        通过</a>
+
+    <div id='div_pt1.42' class="popup_window">
+        <pre>pt1.42: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-OPPO2')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.43' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.43')" >
+        通过</a>
+
+    <div id='div_pt1.43' class="popup_window">
+        <pre>pt1.43: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-VIVO1')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.44' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.44')" >
+        通过</a>
+
+    <div id='div_pt1.44' class="popup_window">
+        <pre>pt1.44: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-VIVO2')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.45' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.45')" >
+        通过</a>
+
+    <div id='div_pt1.45' class="popup_window">
+        <pre>pt1.45: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-北京夜娱')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.46' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.46')" >
+        通过</a>
+
+    <div id='div_pt1.46' class="popup_window">
+        <pre>pt1.46: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-三星')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.47' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.47')" >
+        通过</a>
+
+    <div id='div_pt1.47' class="popup_window">
+        <pre>pt1.47: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-应用宝单机')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.48' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.48')" >
+        通过</a>
+
+    <div id='div_pt1.48' class="popup_window">
+        <pre>pt1.48: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-google1')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.49' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.49')" >
+        通过</a>
+
+    <div id='div_pt1.49' class="popup_window">
+        <pre>pt1.49: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-google2')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.50' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.50')" >
+        通过</a>
+
+    <div id='div_pt1.50' class="popup_window">
+        <pre>pt1.50: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝1-支付宝H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.51' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.51')" >
+        通过</a>
+
+    <div id='div_pt1.51' class="popup_window">
+        <pre>pt1.51: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝2-支付宝H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.52' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.52')" >
+        通过</a>
+
+    <div id='div_pt1.52' class="popup_window">
+        <pre>pt1.52: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝3-支付宝H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.53' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.53')" >
+        通过</a>
+
+    <div id='div_pt1.53' class="popup_window">
+        <pre>pt1.53: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝4-支付宝H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.54' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.54')" >
+        通过</a>
+
+    <div id='div_pt1.54' class="popup_window">
+        <pre>pt1.54: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝5-支付宝H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.55' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.55')" >
+        通过</a>
+
+    <div id='div_pt1.55' class="popup_window">
+        <pre>pt1.55: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝6-支付宝H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.56' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.56')" >
+        通过</a>
+
+    <div id='div_pt1.56' class="popup_window">
+        <pre>pt1.56: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝7-支付宝H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.57' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.57')" >
+        通过</a>
+
+    <div id='div_pt1.57' class="popup_window">
+        <pre>pt1.57: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝8-支付宝H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.58' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.58')" >
+        通过</a>
+
+    <div id='div_pt1.58' class="popup_window">
+        <pre>pt1.58: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝9-支付宝H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.59' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.59')" >
+        通过</a>
+
+    <div id='div_pt1.59' class="popup_window">
+        <pre>pt1.59: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝10-支付宝H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.60' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.60')" >
+        通过</a>
+
+    <div id='div_pt1.60' class="popup_window">
+        <pre>pt1.60: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝1-微信H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.61' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.61')" >
+        通过</a>
+
+    <div id='div_pt1.61' class="popup_window">
+        <pre>pt1.61: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝2-微信H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.62' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.62')" >
+        通过</a>
+
+    <div id='div_pt1.62' class="popup_window">
+        <pre>pt1.62: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝3-微信H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.63' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.63')" >
+        通过</a>
+
+    <div id='div_pt1.63' class="popup_window">
+        <pre>pt1.63: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝4-微信H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.64' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.64')" >
+        通过</a>
+
+    <div id='div_pt1.64' class="popup_window">
+        <pre>pt1.64: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝5-微信H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.65' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.65')" >
+        通过</a>
+
+    <div id='div_pt1.65' class="popup_window">
+        <pre>pt1.65: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝6-微信H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.66' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.66')" >
+        通过</a>
+
+    <div id='div_pt1.66' class="popup_window">
+        <pre>pt1.66: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝7-微信H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.67' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.67')" >
+        通过</a>
+
+    <div id='div_pt1.67' class="popup_window">
+        <pre>pt1.67: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝8-微信H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.68' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.68')" >
+        通过</a>
+
+    <div id='div_pt1.68' class="popup_window">
+        <pre>pt1.68: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝9-微信H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.69' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.69')" >
+        通过</a>
+
+    <div id='div_pt1.69' class="popup_window">
+        <pre>pt1.69: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝10-微信H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.70' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.70')" >
+        通过</a>
+
+    <div id='div_pt1.70' class="popup_window">
+        <pre>pt1.70: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝1-支付宝扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.71' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.71')" >
+        通过</a>
+
+    <div id='div_pt1.71' class="popup_window">
+        <pre>pt1.71: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝2-支付宝扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.72' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.72')" >
+        通过</a>
+
+    <div id='div_pt1.72' class="popup_window">
+        <pre>pt1.72: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝3-支付宝扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.73' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.73')" >
+        通过</a>
+
+    <div id='div_pt1.73' class="popup_window">
+        <pre>pt1.73: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝4-支付宝扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.74' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.74')" >
+        通过</a>
+
+    <div id='div_pt1.74' class="popup_window">
+        <pre>pt1.74: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝5-支付宝扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.75' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.75')" >
+        通过</a>
+
+    <div id='div_pt1.75' class="popup_window">
+        <pre>pt1.75: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝6-支付宝扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.76' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.76')" >
+        通过</a>
+
+    <div id='div_pt1.76' class="popup_window">
+        <pre>pt1.76: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝7-支付宝扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.77' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.77')" >
+        通过</a>
+
+    <div id='div_pt1.77' class="popup_window">
+        <pre>pt1.77: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝8-支付宝扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.78' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.78')" >
+        通过</a>
+
+    <div id='div_pt1.78' class="popup_window">
+        <pre>pt1.78: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝9-支付宝扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.79' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.79')" >
+        通过</a>
+
+    <div id='div_pt1.79' class="popup_window">
+        <pre>pt1.79: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝10-支付宝扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.80' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.80')" >
+        通过</a>
+
+    <div id='div_pt1.80' class="popup_window">
+        <pre>pt1.80: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝1-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.81' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.81')" >
+        通过</a>
+
+    <div id='div_pt1.81' class="popup_window">
+        <pre>pt1.81: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝2-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.82' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.82')" >
+        通过</a>
+
+    <div id='div_pt1.82' class="popup_window">
+        <pre>pt1.82: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝3-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.83' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.83')" >
+        通过</a>
+
+    <div id='div_pt1.83' class="popup_window">
+        <pre>pt1.83: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝4-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.84' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.84')" >
+        通过</a>
+
+    <div id='div_pt1.84' class="popup_window">
+        <pre>pt1.84: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝5-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.85' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.85')" >
+        通过</a>
+
+    <div id='div_pt1.85' class="popup_window">
+        <pre>pt1.85: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝6-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.86' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.86')" >
+        通过</a>
+
+    <div id='div_pt1.86' class="popup_window">
+        <pre>pt1.86: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝7-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.87' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.87')" >
+        通过</a>
+
+    <div id='div_pt1.87' class="popup_window">
+        <pre>pt1.87: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝8-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.88' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.88')" >
+        通过</a>
+
+    <div id='div_pt1.88' class="popup_window">
+        <pre>pt1.88: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝9-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.89' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.89')" >
+        通过</a>
+
+    <div id='div_pt1.89' class="popup_window">
+        <pre>pt1.89: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝10-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.90' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.90')" >
+        通过</a>
+
+    <div id='div_pt1.90' class="popup_window">
+        <pre>pt1.90: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝1-银联H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.91' class='none'>
+    <td class='errorCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.91')" >
+        错误</a>
+
+    <div id='div_ft1.91' class="popup_window">
+        <pre>ft1.91: 
+SubTestCase Error:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝2-银联H5')Traceback (most recent call last):
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\site-packages\urllib3\connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "&lt;string&gt;", line 2, in raise_from
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\site-packages\urllib3\connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\site-packages\urllib3\util\retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\site-packages\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\site-packages\urllib3\connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "&lt;string&gt;", line 2, in raise_from
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\site-packages\urllib3\connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', TimeoutError(10060, '由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。', None, 10060, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 63, in test_pay
+    res = self.client.send(data=params,headers=headers)
+  File "E:\工作\Framework\src\utils\client.py", line 48, in send
+    response = self.session.request(method=self.method, url=self.url, params=params, data=data, **kwargs)
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Administrato\AppData\Local\Programs\Python\Python36\lib\site-packages\requests\adapters.py", line 490, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', TimeoutError(10060, '由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。', None, 10060, None))
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.92' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.92')" >
+        通过</a>
+
+    <div id='div_pt1.92' class="popup_window">
+        <pre>pt1.92: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝3-银联H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.93' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.93')" >
+        通过</a>
+
+    <div id='div_pt1.93' class="popup_window">
+        <pre>pt1.93: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝4-银联H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.94' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.94')" >
+        通过</a>
+
+    <div id='div_pt1.94' class="popup_window">
+        <pre>pt1.94: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝5-银联H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.95' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.95')" >
+        通过</a>
+
+    <div id='div_pt1.95' class="popup_window">
+        <pre>pt1.95: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝6-银联H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.96' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.96')" >
+        通过</a>
+
+    <div id='div_pt1.96' class="popup_window">
+        <pre>pt1.96: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝7-银联H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.97' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.97')" >
+        通过</a>
+
+    <div id='div_pt1.97' class="popup_window">
+        <pre>pt1.97: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝8-银联H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.98' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.98')" >
+        通过</a>
+
+    <div id='div_pt1.98' class="popup_window">
+        <pre>pt1.98: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝9-银联H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.99' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.99')" >
+        通过</a>
+
+    <div id='div_pt1.99' class="popup_window">
+        <pre>pt1.99: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝10-银联H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.100' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.100')" >
+        通过</a>
+
+    <div id='div_pt1.100' class="popup_window">
+        <pre>pt1.100: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝1-APP')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.101' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.101')" >
+        通过</a>
+
+    <div id='div_pt1.101' class="popup_window">
+        <pre>pt1.101: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝2-APP')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.102' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.102')" >
+        通过</a>
+
+    <div id='div_pt1.102' class="popup_window">
+        <pre>pt1.102: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝3-APP')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.103' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.103')" >
+        通过</a>
+
+    <div id='div_pt1.103' class="popup_window">
+        <pre>pt1.103: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝4-APP')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.104' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.104')" >
+        通过</a>
+
+    <div id='div_pt1.104' class="popup_window">
+        <pre>pt1.104: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝5-APP')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.105' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.105')" >
+        通过</a>
+
+    <div id='div_pt1.105' class="popup_window">
+        <pre>pt1.105: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝6-APP')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.106' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.106')" >
+        通过</a>
+
+    <div id='div_pt1.106' class="popup_window">
+        <pre>pt1.106: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝7-APP')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.107' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.107')" >
+        通过</a>
+
+    <div id='div_pt1.107' class="popup_window">
+        <pre>pt1.107: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝8-APP')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.108' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.108')" >
+        通过</a>
+
+    <div id='div_pt1.108' class="popup_window">
+        <pre>pt1.108: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝9-APP')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.109' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.109')" >
+        通过</a>
+
+    <div id='div_pt1.109' class="popup_window">
+        <pre>pt1.109: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝10-APP')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.110' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.110')" >
+        通过</a>
+
+    <div id='div_pt1.110' class="popup_window">
+        <pre>pt1.110: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝1-银联扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.111' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.111')" >
+        通过</a>
+
+    <div id='div_pt1.111' class="popup_window">
+        <pre>pt1.111: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝2-银联扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.112' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.112')" >
+        通过</a>
+
+    <div id='div_pt1.112' class="popup_window">
+        <pre>pt1.112: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝3-银联扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.113' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.113')" >
+        通过</a>
+
+    <div id='div_pt1.113' class="popup_window">
+        <pre>pt1.113: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝4-银联扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.114' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.114')" >
+        通过</a>
+
+    <div id='div_pt1.114' class="popup_window">
+        <pre>pt1.114: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝5-银联扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.115' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.115')" >
+        通过</a>
+
+    <div id='div_pt1.115' class="popup_window">
+        <pre>pt1.115: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝6-银联扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.116' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.116')" >
+        通过</a>
+
+    <div id='div_pt1.116' class="popup_window">
+        <pre>pt1.116: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝7-银联扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.117' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.117')" >
+        通过</a>
+
+    <div id='div_pt1.117' class="popup_window">
+        <pre>pt1.117: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝8-银联扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.118' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.118')" >
+        通过</a>
+
+    <div id='div_pt1.118' class="popup_window">
+        <pre>pt1.118: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝9-银联扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.119' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.119')" >
+        通过</a>
+
+    <div id='div_pt1.119' class="popup_window">
+        <pre>pt1.119: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-爱贝10-银联扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.120' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.120')" >
+        通过</a>
+
+    <div id='div_pt1.120' class="popup_window">
+        <pre>pt1.120: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-瓦力')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.121' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.121')" >
+        通过</a>
+
+    <div id='div_pt1.121' class="popup_window">
+        <pre>pt1.121: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-劲玩')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.122' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.122')" >
+        失败</a>
+
+    <div id='div_ft1.122' class="popup_window">
+        <pre>ft1.122: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-竣付通')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.123' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.123')" >
+        失败</a>
+
+    <div id='div_ft1.123' class="popup_window">
+        <pre>ft1.123: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-快捷支付')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -100
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.124' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.124')" >
+        通过</a>
+
+    <div id='div_pt1.124' class="popup_window">
+        <pre>pt1.124: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇付宝1-支付宝H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.125' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.125')" >
+        失败</a>
+
+    <div id='div_ft1.125' class="popup_window">
+        <pre>ft1.125: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇付宝1-微信H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -100
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.126' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.126')" >
+        通过</a>
+
+    <div id='div_pt1.126' class="popup_window">
+        <pre>pt1.126: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇付宝1-支付宝扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.127' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.127')" >
+        通过</a>
+
+    <div id='div_pt1.127' class="popup_window">
+        <pre>pt1.127: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇付宝1-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.128' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.128')" >
+        通过</a>
+
+    <div id='div_pt1.128' class="popup_window">
+        <pre>pt1.128: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇付宝3-支付宝H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.129' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.129')" >
+        通过</a>
+
+    <div id='div_pt1.129' class="popup_window">
+        <pre>pt1.129: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇付宝4-支付宝H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.130' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.130')" >
+        通过</a>
+
+    <div id='div_pt1.130' class="popup_window">
+        <pre>pt1.130: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇付宝5-支付宝H5')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.131' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.131')" >
+        失败</a>
+
+    <div id='div_ft1.131' class="popup_window">
+        <pre>ft1.131: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇付宝3-微信H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -100
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.132' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.132')" >
+        失败</a>
+
+    <div id='div_ft1.132' class="popup_window">
+        <pre>ft1.132: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇付宝4-微信H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -100
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.133' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.133')" >
+        失败</a>
+
+    <div id='div_ft1.133' class="popup_window">
+        <pre>ft1.133: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇付宝5-微信H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -100
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.134' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.134')" >
+        通过</a>
+
+    <div id='div_pt1.134' class="popup_window">
+        <pre>pt1.134: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇付宝3-支付宝扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.135' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.135')" >
+        通过</a>
+
+    <div id='div_pt1.135' class="popup_window">
+        <pre>pt1.135: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇付宝4-支付宝扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.136' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.136')" >
+        通过</a>
+
+    <div id='div_pt1.136' class="popup_window">
+        <pre>pt1.136: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇付宝5-支付宝扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.137' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.137')" >
+        失败</a>
+
+    <div id='div_ft1.137' class="popup_window">
+        <pre>ft1.137: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇付宝3-微信扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -100
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.138' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.138')" >
+        失败</a>
+
+    <div id='div_ft1.138' class="popup_window">
+        <pre>ft1.138: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇付宝4-微信扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -100
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.139' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.139')" >
+        失败</a>
+
+    <div id='div_ft1.139' class="popup_window">
+        <pre>ft1.139: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇付宝5-微信扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -100
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.140' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.140')" >
+        通过</a>
+
+    <div id='div_pt1.140' class="popup_window">
+        <pre>pt1.140: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-杉德1-支付宝扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.141' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.141')" >
+        通过</a>
+
+    <div id='div_pt1.141' class="popup_window">
+        <pre>pt1.141: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-杉德2-支付宝扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.142' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.142')" >
+        通过</a>
+
+    <div id='div_pt1.142' class="popup_window">
+        <pre>pt1.142: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-杉德1-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.143' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.143')" >
+        通过</a>
+
+    <div id='div_pt1.143' class="popup_window">
+        <pre>pt1.143: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-杉德2-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.144' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.144')" >
+        失败</a>
+
+    <div id='div_ft1.144' class="popup_window">
+        <pre>ft1.144: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-先锋1-支付宝扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.145' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.145')" >
+        失败</a>
+
+    <div id='div_ft1.145' class="popup_window">
+        <pre>ft1.145: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-先锋2-支付宝扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.146' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.146')" >
+        失败</a>
+
+    <div id='div_ft1.146' class="popup_window">
+        <pre>ft1.146: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-先锋1-微信扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.147' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.147')" >
+        失败</a>
+
+    <div id='div_ft1.147' class="popup_window">
+        <pre>ft1.147: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-先锋2-微信扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.148' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.148')" >
+        通过</a>
+
+    <div id='div_pt1.148' class="popup_window">
+        <pre>pt1.148: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇聚1-支付宝扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.149' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.149')" >
+        通过</a>
+
+    <div id='div_pt1.149' class="popup_window">
+        <pre>pt1.149: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇聚2-支付宝扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.150' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.150')" >
+        通过</a>
+
+    <div id='div_pt1.150' class="popup_window">
+        <pre>pt1.150: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇聚3-支付宝扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.151' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.151')" >
+        通过</a>
+
+    <div id='div_pt1.151' class="popup_window">
+        <pre>pt1.151: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇聚4-支付宝扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.152' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.152')" >
+        通过</a>
+
+    <div id='div_pt1.152' class="popup_window">
+        <pre>pt1.152: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇聚1-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.153' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.153')" >
+        通过</a>
+
+    <div id='div_pt1.153' class="popup_window">
+        <pre>pt1.153: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇聚2-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.154' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.154')" >
+        通过</a>
+
+    <div id='div_pt1.154' class="popup_window">
+        <pre>pt1.154: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇聚3-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.155' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.155')" >
+        通过</a>
+
+    <div id='div_pt1.155' class="popup_window">
+        <pre>pt1.155: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-汇聚4-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.156' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.156')" >
+        失败</a>
+
+    <div id='div_ft1.156' class="popup_window">
+        <pre>ft1.156: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝1-支付宝H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.157' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.157')" >
+        失败</a>
+
+    <div id='div_ft1.157' class="popup_window">
+        <pre>ft1.157: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝2-支付宝H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.158' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.158')" >
+        失败</a>
+
+    <div id='div_ft1.158' class="popup_window">
+        <pre>ft1.158: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝3-支付宝H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.159' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.159')" >
+        失败</a>
+
+    <div id='div_ft1.159' class="popup_window">
+        <pre>ft1.159: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝4-支付宝H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.160' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.160')" >
+        失败</a>
+
+    <div id='div_ft1.160' class="popup_window">
+        <pre>ft1.160: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝5-支付宝H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.161' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.161')" >
+        失败</a>
+
+    <div id='div_ft1.161' class="popup_window">
+        <pre>ft1.161: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝1-微信H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.162' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.162')" >
+        失败</a>
+
+    <div id='div_ft1.162' class="popup_window">
+        <pre>ft1.162: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝2-微信H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.163' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.163')" >
+        失败</a>
+
+    <div id='div_ft1.163' class="popup_window">
+        <pre>ft1.163: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝3-微信H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.164' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.164')" >
+        失败</a>
+
+    <div id='div_ft1.164' class="popup_window">
+        <pre>ft1.164: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝4-微信H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.165' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.165')" >
+        失败</a>
+
+    <div id='div_ft1.165' class="popup_window">
+        <pre>ft1.165: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝5-微信H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.166' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.166')" >
+        失败</a>
+
+    <div id='div_ft1.166' class="popup_window">
+        <pre>ft1.166: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝1-银联H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.167' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.167')" >
+        失败</a>
+
+    <div id='div_ft1.167' class="popup_window">
+        <pre>ft1.167: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝2-银联H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.168' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.168')" >
+        失败</a>
+
+    <div id='div_ft1.168' class="popup_window">
+        <pre>ft1.168: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝3-银联H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.169' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.169')" >
+        失败</a>
+
+    <div id='div_ft1.169' class="popup_window">
+        <pre>ft1.169: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝4-银联H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.170' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.170')" >
+        失败</a>
+
+    <div id='div_ft1.170' class="popup_window">
+        <pre>ft1.170: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝5-银联H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.171' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.171')" >
+        失败</a>
+
+    <div id='div_ft1.171' class="popup_window">
+        <pre>ft1.171: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝1-支付宝扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.172' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.172')" >
+        失败</a>
+
+    <div id='div_ft1.172' class="popup_window">
+        <pre>ft1.172: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝2-支付宝扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.173' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.173')" >
+        失败</a>
+
+    <div id='div_ft1.173' class="popup_window">
+        <pre>ft1.173: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝3-支付宝扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.174' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.174')" >
+        失败</a>
+
+    <div id='div_ft1.174' class="popup_window">
+        <pre>ft1.174: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝4-支付宝扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.175' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.175')" >
+        失败</a>
+
+    <div id='div_ft1.175' class="popup_window">
+        <pre>ft1.175: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝5-支付宝扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.176' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.176')" >
+        通过</a>
+
+    <div id='div_pt1.176' class="popup_window">
+        <pre>pt1.176: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝1-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.177' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.177')" >
+        通过</a>
+
+    <div id='div_pt1.177' class="popup_window">
+        <pre>pt1.177: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝2-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.178' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.178')" >
+        通过</a>
+
+    <div id='div_pt1.178' class="popup_window">
+        <pre>pt1.178: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝3-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.179' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.179')" >
+        通过</a>
+
+    <div id='div_pt1.179' class="popup_window">
+        <pre>pt1.179: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝4-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.180' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.180')" >
+        通过</a>
+
+    <div id='div_pt1.180' class="popup_window">
+        <pre>pt1.180: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-合利宝5-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.181' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.181')" >
+        失败</a>
+
+    <div id='div_ft1.181' class="popup_window">
+        <pre>ft1.181: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-快捷通1-支付宝扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.182' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.182')" >
+        失败</a>
+
+    <div id='div_ft1.182' class="popup_window">
+        <pre>ft1.182: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-快捷通2-支付宝扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.183' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.183')" >
+        失败</a>
+
+    <div id='div_ft1.183' class="popup_window">
+        <pre>ft1.183: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-快捷通3-支付宝扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.184' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.184')" >
+        失败</a>
+
+    <div id='div_ft1.184' class="popup_window">
+        <pre>ft1.184: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-快捷通1-微信扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.185' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.185')" >
+        失败</a>
+
+    <div id='div_ft1.185' class="popup_window">
+        <pre>ft1.185: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-快捷通2-微信扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.186' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.186')" >
+        失败</a>
+
+    <div id='div_ft1.186' class="popup_window">
+        <pre>ft1.186: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-快捷通3-微信扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -1
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.187' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.187')" >
+        失败</a>
+
+    <div id='div_ft1.187' class="popup_window">
+        <pre>ft1.187: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-掌灵-支付宝H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -100
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.188' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.188')" >
+        失败</a>
+
+    <div id='div_ft1.188' class="popup_window">
+        <pre>ft1.188: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-掌灵-微信H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -100
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.189' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.189')" >
+        失败</a>
+
+    <div id='div_ft1.189' class="popup_window">
+        <pre>ft1.189: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-掌灵-微信扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -100
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.190' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.190')" >
+        失败</a>
+
+    <div id='div_ft1.190' class="popup_window">
+        <pre>ft1.190: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-共创支付-支付宝H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -100
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.191' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.191')" >
+        失败</a>
+
+    <div id='div_ft1.191' class="popup_window">
+        <pre>ft1.191: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-共创支付-微信H5')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -100
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.192' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.192')" >
+        失败</a>
+
+    <div id='div_ft1.192' class="popup_window">
+        <pre>ft1.192: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-共创支付-支付宝扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -100
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.193' class='none'>
+    <td class='failCase'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.193')" >
+        失败</a>
+
+    <div id='div_ft1.193' class="popup_window">
+        <pre>ft1.193: 
+SubTestCase Failed:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-共创支付-微信扫码')Traceback (most recent call last):
+  File "E:\工作\Framework\src\test\interface\test_pay.py", line 68, in test_pay
+    self.assertEqual(expect, result)
+AssertionError: 0 != -100
+</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.194' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.194')" >
+        通过</a>
+
+    <div id='div_pt1.194' class="popup_window">
+        <pre>pt1.194: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-连连支付1-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.195' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.195')" >
+        通过</a>
+
+    <div id='div_pt1.195' class="popup_window">
+        <pre>pt1.195: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-连连支付2-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.196' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.196')" >
+        通过</a>
+
+    <div id='div_pt1.196' class="popup_window">
+        <pre>pt1.196: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-连连支付3-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.197' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.197')" >
+        通过</a>
+
+    <div id='div_pt1.197' class="popup_window">
+        <pre>pt1.197: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-连连支付4-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.198' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.198')" >
+        通过</a>
+
+    <div id='div_pt1.198' class="popup_window">
+        <pre>pt1.198: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-连连支付5-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.199' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.199')" >
+        通过</a>
+
+    <div id='div_pt1.199' class="popup_window">
+        <pre>pt1.199: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-连连支付6-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.200' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.200')" >
+        通过</a>
+
+    <div id='div_pt1.200' class="popup_window">
+        <pre>pt1.200: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-连连支付7-微信扫码')</pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.201' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pay: 统一订单接口-新平台</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.201')" >
+        通过</a>
+
+    <div id='div_pt1.201' class="popup_window">
+        <pre>pt1.201: 
+SubTestCase Pass:
+test_pay (__main__.TestPay) (data='不使用充值策略-新平台-充值5元-连连支付8-微信扫码')</pre>
     </div>
     <!--css div popup end-->
 
@@ -280,10 +4122,10 @@ test_productlist (__main__.TestMall) (data='每页显示2个商品，当前页�
 
         <tr id='total_row'>
             <td>总计</td>
-            <td>2</td>
-            <td>2</td>
-            <td>0</td>
-            <td>0</td>
+            <td>201</td>
+            <td>150</td>
+            <td>50</td>
+            <td>1</td>
             <td>&nbsp;</td>
         </tr>
     </table>
@@ -317,9 +4159,9 @@ test_productlist (__main__.TestMall) (data='每页显示2个商品，当前页�
                     radius : '60%',
                     center: ['50%', '60%'],
                     data:[
-                        {value:2, name:'通过'},
-                        {value:0, name:'失败'},
-                        {value:0, name:'错误'}
+                        {value:150, name:'通过'},
+                        {value:50, name:'失败'},
+                        {value:1, name:'错误'}
                     ],
                     itemStyle: {
                         emphasis: {

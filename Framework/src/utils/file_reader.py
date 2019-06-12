@@ -105,6 +105,8 @@ class ExcelReader:
 					self._data.append(s.row_values(col))
 		return self._data
 
+	
+
 
 
 # class readExcel():
@@ -119,17 +121,22 @@ class ExcelReader:
 # 				cls.append(sheet.row_values(i))               
 # 		return cls
 
-if __name__ == '__main__':#我们执行该文件测试一下是否可以正确获取Excel中的值
+# if __name__ == '__main__':#我们执行该文件测试一下是否可以正确获取Excel中的值
 	#print(readExcel().get_xls('E:\工作\Framework\data\APITest.xlsx', 'InfoCheck'))
-	datas = ExcelReader('E:\工作\Framework\data\APITest.xlsx', sheet='ProductList').data
-	print(datas)
-	print (len(datas))
-	for i in range(0, len(datas)):
+	# datas = ExcelReader('E:\工作\Framework\data\PayAPI.xlsx', sheet='Pay').data
+	# # print(datas)
+	# # print (len(datas))
+	# for i in range(0, len(datas)):
 		
-		# print (datas[i]['expectation'])
-		# datas[i].pop('expectation')
-		print (datas[i])
-		print (json.dumps(datas[i]))
+	# 	# print (datas[i]['expectation'])
+	# 	# datas[i].pop('expectation')
+	# 	# print (datas[i])
+
+	# 	a = str(Factory().create('zh_CN').random_number(digits=6))
+	# 	print (a)
+	# 	datas[i]['orderNO']=str(int(time.time()*1000)) + a
+	# 	print (datas[i])
+		# print (json.dumps(datas[i]))
 
 # if __name__ == '__main__':
 # 	#y = r'E:\工作\Framework\config\config.yaml'

@@ -29,6 +29,14 @@ def random_ipv4():
     """随机IPV4地址"""
     return fake.ipv4()
 
+def random_barcode(length=8):
+    """随机8位或者13位条码"""
+    return fake.ean(length)
+
+def random_number(digits=6):
+    """随机数字，digits为数字位数"""
+    return fake.random_number(digits)
+
 
 def random_str(min_chars=0, max_chars=8):
     """长度在最大值与最小值之间的随机字符串"""
@@ -55,18 +63,19 @@ def factory_choice_generator(values):
             yield random.choice(my_list)
     return choice_generator
 
-# if __name__ == '__main__':
-#     print(random_phone_number())
-#     print(random_name())
-#     print(random_address())
-#     print(random_email())
-#     print(random_ipv4())
-#     print(random_str(min_chars=6, max_chars=8))
-#     id_gen = factory_generate_ids(starting_id=0, increment=2)()
-#     for i in range(5):
-#         print(next(id_gen))
+if __name__ == '__main__':
+    # print(random_phone_number())
+    # print(random_name())
+    # print(random_address())
+    # print(random_email())
+    # print(random_ipv4())
+     print(random_number())
+    # print(random_str(min_chars=6, max_chars=8))
+    # id_gen = factory_generate_ids(starting_id=1001, increment=1)()
+    # for i in range(5):
+    #     print(next(id_gen))
 
-#     choices = ['John', 'Sam', 'Lily', 'Rose']
-#     choice_gen = factory_choice_generator(choices)()
-#     for i in range(5):
-#         print(next(choice_gen))
+    # choices = ['John', 'Sam', 'Lily', 'Rose']
+    # choice_gen = factory_choice_generator(choices)()
+    # for i in range(5):
+    #     print(next(choice_gen))

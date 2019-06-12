@@ -14,9 +14,9 @@ from src.utils.client import HTTPClient
 from src.utils.extractor import JMESPathExtractor
 
 class TestMall(unittest.TestCase):
-	"""钻石商城接口"""
-	API_URL = Config().get('API_URL').get('ProductList')
-	excel = DATA_PATH + '\APITest.xlsx'
+	"""统一订单接口"""
+	API_URL = Config().get('API_URL').get('Pay')
+	excel = DATA_PATH + '\PayTest.xlsx'
 	
 	def setUp(self):
 		self.client = HTTPClient(url=self.API_URL, method='POST')
@@ -32,7 +32,7 @@ class TestMall(unittest.TestCase):
 				self.setUp()
 				# logger.debug(datas[d])
 				expect = datas[d]['expectation']
-				#请求的参数剔除期望值列
+				#请求的参数剔除期望值列、描述列
 				datas[d].pop('expectation')
 				datas[d].pop('describe')
 				params = datas[d]
