@@ -22,5 +22,5 @@ email:
     receiver: '547308262@qq.com'
     server: 'smtp.163.com'
     sender: 'siyu201410@163.com'
-    password: 'yusi051925'
+    password: ''
 
