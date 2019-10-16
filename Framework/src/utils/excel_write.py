@@ -1,28 +1,41 @@
+# -*- coding: utf-8 -*-
+# @Author: yusi
+# @Date:   2019-07-17 10:16:49
+# @Last Modified by:   yusi
+# @Last Modified time: 2019-07-19 10:28:31
 """写入excel"""
 import openpyxl as xl
+from openpyxl import load_workbook
 from openpyxl.styles import Alignment, Font, colors, Side, Border
 from openpyxl.utils import get_column_letter, column_index_from_string
 import re,xlwt,os
 
-# def ExcelWrite(sheet=u'测试结果'):
-# 	"""sheet: sheet名称"""
-# 	workbook = xlwt.Workbook(encoding='utf-8')
-# 	#在excel测试报告中创建sheet页
-# 	worksheet = workbook.add_sheet(sheet)
-# 	#设置字体居中对齐
-# 	alignment = xlwt.Alignment()
-# 	alignment.horz = alignment.HORZ_CENTER
-# 	alignment.vert = alignment.VERT_CENTER
-# 	style = xlwt.XFStyle()
-# 	style.alignment = alignment
-# 	#具体合并哪些单元格以及写入相应的信息
-# 	worksheet.write_merge(1,3,0,3,'测试报告',style)
-# 	worksheet.write(4,0,'用例名称')
-# 	worksheet.write(4,1,'支付网关')
-# 	worksheet.write(4,2,'网站商务识别号')
-# 	worksheet.write(4,3,'返回结果')
+def copy_excel(excelpath1, excelpath2):
+    '''复制excek，把excelpath1数据复制到excelpath2'''
+    wb2 = xl.Workbook()
+    wb2.save(excelpath2)
+    # 读取数据
+    wb1 = xl.load_workbook(excelpath1)
+    wb2 = xl.load_workbook(excelpath2)
+    sheets1 = wb1.sheetnames
+    sheets2 = wb2.sheetnames
+    sheet1 = wb1[sheets1[0]]
+    sheet2 = wb2[sheets2[0]]
+    max_row = sheet1.max_row         # 最大行数
+    max_column = sheet1.max_column   # 最大列数
 
-# 	return worksheet,workbook
+    for m in list(range(1,max_row+1)):
+        for n in list(range(97,97+max_column)):   # chr(97)='a'
+            n = chr(n)                            # ASCII字符
+            i ='%s%d'% (n, m)                     # 单元格编号
+            cell1 = sheet1[i].value               # 获取data单元格数据
+            sheet2[i].value = cell1               # 赋值到test单元格
+
+    wb2.save(excelpath2)                 # 保存数据
+    wb1.close()                          # 关闭excel
+    wb2.close()
+
+
 
 def writeExcel(path, data, title=None, row_height=18, merge_row_col=[]):
     """

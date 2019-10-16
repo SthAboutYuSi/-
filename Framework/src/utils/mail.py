@@ -1,11 +1,18 @@
+# -*- coding: utf-8 -*-
+# @Author: yusi
+# @Date:   2019-07-17 10:16:50
+# @Last Modified by:   yusi
+# @Last Modified time: 2019-07-17 12:59:29
 """
 邮件类。用来给指定用户发送邮件。可指定多个收件人，可带附件。
 """
-import re
+import re,sys,os
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from socket import gaierror, error
+
+# sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "../../..")))
 from src.utils.log import logger
 
 

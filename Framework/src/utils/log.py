@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Author: yusi
+# @Date:   2019-07-17 10:16:50
+# @Last Modified by:   yusi
+# @Last Modified time: 2019-07-17 12:00:09
 """
 日志类。通过读取配置文件，定义日志级别、日志文件名、日志格式等。
 一般直接把logger import进去

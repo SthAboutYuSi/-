@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Author: yusi
+# @Date:   2019-07-17 10:16:49
+# @Last Modified by:   yusi
+# @Last Modified time: 2019-07-19 11:06:00
 """
 文件读取。YamlReader读取yaml文件，ExcelReader读取excel。
 """
@@ -90,13 +95,17 @@ class ExcelReader:
 					value =s.row_values(row)
 					for col in range(0, s.ncols):
 						# print (value[col])
-						if s.row_values(row)[col] == 'nowtime' :
-							value[col] = int(time.time())
+						# if s.row_values(row)[col] == 'nowtime' :
+						# 	value[col] = int(time.time())
 						# print (type(value[col]))
-						if type(value[col]) == float and value[col] % 1 == 0:
-							value[col]=int(value[col])
+						if type(value[col]) == float:
+							if value[col] % 1 == 0:
+								value[col]=int(value[col])
+							else:
+								value[col]=float(value[col])
 						elif type(value[col]) == str:
 							value[col]=str(value[col])
+						
 
 					self._data.append(dict(zip(title, value)))
 			else:
@@ -105,47 +114,5 @@ class ExcelReader:
 					self._data.append(s.row_values(col))
 		return self._data
 
-	
-
-
-
-# class readExcel():
-# 	def get_xls(self, xlsPath, sheet_name):# xls_name填写用例的Excel名称 sheet_name该Excel的sheet名称
-# 		cls = []
-# 		file = open_workbook(xlsPath)# 打开用例Excel
-# 		sheet = file.sheet_by_name(sheet_name)#获得打开Excel的sheet
-#         # 获取这个sheet内容行数
-# 		nrows = sheet.nrows
-# 		for i in range(nrows):#根据行数做循环
-# 			if sheet.row_values(i)[0] != u'case_name':#如果这个Excel的这个sheet的第i行的第一列不等于case_name那么我们把这行的数据添加到cls[]
-# 				cls.append(sheet.row_values(i))               
-# 		return cls
-
-# if __name__ == '__main__':#我们执行该文件测试一下是否可以正确获取Excel中的值
-	#print(readExcel().get_xls('E:\工作\Framework\data\APITest.xlsx', 'InfoCheck'))
-	# datas = ExcelReader('E:\工作\Framework\data\PayAPI.xlsx', sheet='Pay').data
-	# # print(datas)
-	# # print (len(datas))
-	# for i in range(0, len(datas)):
-		
-	# 	# print (datas[i]['expectation'])
-	# 	# datas[i].pop('expectation')
-	# 	# print (datas[i])
-
-	# 	a = str(Factory().create('zh_CN').random_number(digits=6))
-	# 	print (a)
-	# 	datas[i]['orderNO']=str(int(time.time()*1000)) + a
-	# 	print (datas[i])
-		# print (json.dumps(datas[i]))
-
-# if __name__ == '__main__':
-# 	#y = r'E:\工作\Framework\config\config.yaml'
-# 	yaml = PathReader.get_Path()
-# 	reader = YamlReader(y)
-# 	print(reader.data)
-
-# 	e = r'E:/工作/Framework/data/baidu.xlsx'
-# 	reader = ExcelReader(e, title_line=True)
-# 	print(reader.data)
 		
 		

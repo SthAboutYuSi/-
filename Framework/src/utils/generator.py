@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Author: yusi
+# @Date:   2019-07-17 10:16:49
+# @Last Modified by:   yusi
+# @Last Modified time: 2019-08-16 16:20:47
 """一些生成器方法，生成随机数，手机号，以及连续数字等"""
 import random
 from faker import Factory
@@ -37,6 +42,8 @@ def random_number(digits=6):
     """随机数字，digits为数字位数"""
     return fake.random_number(digits)
 
+def  random_password(length=10, special_chars=True, digits=True, upper_case=True, lower_case=True):
+    return fake.password(length, special_chars, digits, upper_case, lower_case)
 
 def random_str(min_chars=0, max_chars=8):
     """长度在最大值与最小值之间的随机字符串"""
@@ -66,11 +73,12 @@ def factory_choice_generator(values):
 if __name__ == '__main__':
     # print(random_phone_number())
     # print(random_name())
+    print(random_password(length=50, special_chars=False, digits=True, upper_case=True, lower_case=True))
     # print(random_address())
     # print(random_email())
     # print(random_ipv4())
-     print(random_number())
-    # print(random_str(min_chars=6, max_chars=8))
+     # print(random_address())
+    print(random_str(min_chars=6, max_chars=8)+str(random_number()))
     # id_gen = factory_generate_ids(starting_id=1001, increment=1)()
     # for i in range(5):
     #     print(next(id_gen))

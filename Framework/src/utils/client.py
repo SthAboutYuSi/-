@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Author: yusi
+# @Date:   2019-07-17 10:16:49
+# @Last Modified by:   yusi
+# @Last Modified time: 2019-08-06 12:22:05
 """
 添加用于接口测试的client，对于HTTP接口添加HTTPClient，发送http请求。
 还可以封装TCPClient，用来进行tcp链接，测试socket接口等等。
@@ -9,7 +14,7 @@ sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "../..")))
 from src.utils.log import logger
 from src.utils.extractor import JMESPathExtractor
 
-METHODS = ['GET', 'POST', 'HEAD', 'TRACE', 'PUT', 'DELETE', 'OPTIONS', 'CONNECT']
+METHODS = ['GET', 'POST', 'HEAD', 'TRACE', 'PUT', 'PATCH', 'DELETE', 'OPTIONS', 'CONNECT']
 
 
 class UnSupportMethodException(Exception):
@@ -49,26 +54,31 @@ class HTTPClient(object):
         response.encoding = 'utf-8'
         logger.debug('params:{0}, data:{1}'.format(params, data))
         logger.debug('{0} {1}'.format(self.method, self.url))
-        if response.status_code == 200:
+        if response.status_code == requests.codes.ok:
             logger.debug('请求成功: {0}\n{1}'.format(response, response.text))
         else:
             logger.debug('请求失败：{0}\n{1}'.format(response, response.text))
+            response.raise_for_status()
         return response
 
+    def sendbyurl(self,params):
+        """get请求时将请求参数拼接成请求地址的一部分"""
+        url = "%s%s" %(self.url,params)
+        response = self.session.get(url)
+        logger.debug('请求方式：GET,请求地址： {0}'.format(url))
+        if response.status_code == requests.codes.ok:
+            logger.debug('请求成功: {0}\n{1}'.format(response, response.text))
+        else:
+            logger.debug('请求失败：{0}\n{1}'.format(response, response.text))
+            response.raise_for_status()
+        return response
+
+
 if __name__ == '__main__':
-    datas="{'mchId': 10001, 'isPloy': 0, 'platformType': 1, 'userID': 10087, 'account': 10087, 'orderNO': '155929124913961877', 'productId': 101, 'channelNO': 1020001001, 'payAmount': 6, 'itemID': 10001, 'itemCount': 50001, 'subject': '6W', 'body': '6W', 'device': 0, 'method': 0, 'gateway': 101, 'identity': 'r0tv6alf3c6eo8rfa5df85j8kg0mtach', 'extData1': '', 'payExtInfo': '', 'sign': '', 'signType': 'RSA', 'version': '1.0'}"
+    # datas="{'mchId': 10001, 'isPloy': 0, 'platformType': 1, 'userID': 10087, 'account': 10087, 'orderNO': '155929124913961877', 'productId': 101, 'channelNO': 1020001001, 'payAmount': 6, 'itemID': 10001, 'itemCount': 50001, 'subject': '6W', 'body': '6W', 'device': 0, 'method': 0, 'gateway': 101, 'identity': 'r0tv6alf3c6eo8rfa5df85j8kg0mtach', 'extData1': '', 'payExtInfo': '', 'sign': '', 'signType': 'RSA', 'version': '1.0'}"
     
-    url = "http://10.8.26.218:1029/pay"
-    headers={
-    'Content-Type': "application/json"
+    url = "http://httpbin.org/get/"
 
-
-    
-   
-    
-   
-   
-    }
     # # print (len(datas))
     # # requests.session().headers.update({'content-type': 'application/json'})
     # print (requests.session().headers)
@@ -77,7 +87,7 @@ if __name__ == '__main__':
         # print (str(json.dumps(datas[d])))
     #     # print (type(datas[d]))
         # res = HTTPClient(url='http://10.8.26.218:1029/pay', method='POST', headers={'Content_Type':'application/json'}).send(data=datas[d])
-    response = requests.request("POST",url, data=datas, headers={'Content-Type': "application/json"})
+    response = HTTPClient(url=url).sendbyurl(21321)
 
     #     print (len(res.text))
     #     print (type(res.text))
