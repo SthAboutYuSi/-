@@ -1,0 +1,11 @@
+﻿依赖包:
+Faker
+jmespath
+openpyxl
+PyYAML
+requests
+xlrd
+XlsxWriter
+xlwt
+pymysql
+redis
